@@ -4,13 +4,13 @@
 using namespace std;
 
 template<typename _Tp>
-using decay_t = typename decay<_Tp>::type;
+using decay_t_ = typename decay<_Tp>::type;
 
 template<typename Callable>
 union storage
 {
     storage() {}
-    decay_t<Callable> callable;
+    decay_t_<Callable> callable;
 };
 
 template<int, typename Callable, typename Ret, typename... Args>
